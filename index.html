@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="notranslate" translate="no">
+<html lang="tr" class="notranslate" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
@@ -7,29 +7,55 @@
     <title>Gamer Merkezi 2026</title>
     <style>
         body { background-color: #0a0a0c; color: #e0e0e0; font-family: sans-serif; margin: 0; line-height: 1.6; }
-        .container { padding: 20px; text-align: center; }
-        header { background: #16161a; padding: 40px 20px; border-bottom: 2px solid #00f2ff; }
-        h1 { color: #00f2ff; margin: 0; font-size: 24px; }
-        .card { background: #16161a; margin: 20px auto; padding: 20px; border-radius: 10px; max-width: 500px; border: 1px solid #333; }
-        .btn { background: #00f2ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 15px; }
+        .container { padding: 20px; text-align: center; max-width: 600px; margin: auto; }
+        header { background: #16161a; padding: 30px 20px; border-bottom: 2px solid #00f2ff; }
+        h1 { color: #00f2ff; margin: 0; font-size: 24px; text-transform: uppercase; }
+        .card { background: #1c1c21; margin: 20px 0; padding: 20px; border-radius: 15px; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h2 { color: #00f2ff; font-size: 20px; }
+        .taktik-kutusu { background: #25252b; padding: 15px; border-radius: 10px; text-align: left; margin-top: 15px; display: none; border-left: 4px solid #00f2ff; }
+        .btn { background: #00f2ff; color: #000; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; cursor: pointer; border: none; font-size: 16px; }
+        .footer { font-size: 12px; color: #666; margin-top: 40px; }
     </style>
+    <script>
+        function goster(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>OYUNCU MERKEZİ 2026</h1>
-        <p>Taktikler, Kodlar ve Hediyeler</p>
+        <p>Güncel Oyun Rehberleri ve Hediye Kodları</p>
     </header>
     <div class="container">
         <div class="card">
-            <h2>Brawl Stars Bedava Elmas</h2>
-            <p>2026 Mart ayı güncel elmas kazanma yöntemleri burada!</p>
-            <a href="#" class="btn">TIKLA ÖĞREN</a>
+            <h2>Brawl Stars: Bedava Elmas Taktikleri</h2>
+            <p>Mart 2026'da çalışan tek yöntem! Supercell ID ile nasıl elmas kazanılır?</p>
+            <button onclick="goster('brawl')" class="btn">TIKLA VE TAKTİĞİ GÖR</button>
+            <div id="brawl" class="taktik-kutusu">
+                <strong>1. Yöntem:</strong> Supercell Store üzerinden haftalık ücretsiz hediyeleri toplayın.<br>
+                <strong>2. Yöntem:</strong> Yeni etkinlik haritalarında ilk 3'e girerek bonus kutuları açın.<br>
+                <em>*Not: Asla şifrenizi kimseyle paylaşmayın!</em>
+            </div>
         </div>
+
         <div class="card">
-            <h2>Roblox Robux Kodları</h2>
-            <p>Henüz süresi dolmamış aktif promosyon kodlarını listeledik.</p>
-            <a href="#" class="btn">KODLARI GÖR</a>
+            <h2>Roblox: Mart 2026 Robux Kodları</h2>
+            <p>Yeni sezona özel promosyon kodları listelendi.</p>
+            <button onclick="goster('roblox')" class="btn">KODLARI LİSTELE</button>
+            <div id="roblox" class="taktik-kutusu">
+                - <strong>MARCH2026GIFT:</strong> (100 Robux)<br>
+                - <strong>GAMERCENTRE:</strong> (Özel Şapka)<br>
+                - <strong>RIBBON2026:</strong> (Yeni Aksesuar)
+            </div>
         </div>
+        
+        <p class="footer">© 2026 Oyuncu Merkezi - Tüm hakları saklıdır.</p>
     </div>
 </body>
 </html>
